@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    name: hello github action
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout source code
+        uses: actions/checkout@main
+
+      - name: echo hello
+        run: echo "Hello"
